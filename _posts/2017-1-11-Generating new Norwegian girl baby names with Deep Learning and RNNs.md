@@ -2,7 +2,43 @@
 layout: post
 title: Generating new Norwegian girl baby names with Deep Learning and RNNs
 date:  2017-01-11 12:54:47
-excerpt: "Train and sample from character-level RNN language models that learn to generate new Norwegian girl baby names"
+excerpt: "Train and sample from character-level RNN language models that learn to generate new Norwegian girl baby names. The model clearly was able to learn how (which is quite scary) to generate Norwegian sounding girl names based on 630 name sample of the most common girl baby names in Norway
+the last 10 years. 
+
+Here is a sample of new names (names that were not listed in the SSB name file) the 512 node with 3 hidden LSTM layers were able to produce:
+
+Agne
+Ajeliana
+Amøy 		- Sounds like an island up north or on the west coast of Norway :)
+Andrika
+Angele
+Asane
+Avami 		- Probably a result of ethnic minority names increasing in Norway with combinations listed in the training set
+Dine
+Hedidika
+Helda
+Ingele
+Jenenek 	- Polish sounding :)
+Jina
+Junate
+Leina 		- Sounds like a dog's name
+Licke
+Lorja
+Recina
+Ren 		- What? 
+Renise
+Robannike	- Sounds like a plant 
+Roniana
+Sikone
+Sire
+Sirin
+Sofje
+Soisa
+Soja		- The child wearing this name is doomed to be a vegetarian 
+Sorie
+Ushile 		- Probably a result of ethnic minority names increasing in Norway with combinations listed in the training set
+Vedina
+"
 mathjax: true
 comments: true
 ---
