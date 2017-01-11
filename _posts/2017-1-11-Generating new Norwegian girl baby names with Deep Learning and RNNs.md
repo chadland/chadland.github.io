@@ -2,7 +2,7 @@
 layout: post
 title: Generating new Norwegian girl baby names with Deep Learning and RNNs
 date:  2017-01-11 12:54:47
-excerpt: "Train and sample from character-level RNN language models that learn to generate "new" Norwegian girl baby names"
+excerpt: "Train and sample from character-level RNN language models that learn to generate ""new"" Norwegian girl baby names"
 mathjax: true
 comments: true
 ---
