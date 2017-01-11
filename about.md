@@ -3,13 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
+I am Christer Hadland, a PhD student at HiOA (www.hioa.no) working on areas ranging from Deep Learning to Applied Statistics.
+My research interests include recommender systems, automated generated rap lyrics and poems , etc. 
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+### Mandatory Quote 
+"I'd rather have a free bottle in front of me than a prefrontal lobotomy" (Tom Waits)
 
 ### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[christer.hadland@gmail.com](mailto:christer.hadland@gmail.com)
