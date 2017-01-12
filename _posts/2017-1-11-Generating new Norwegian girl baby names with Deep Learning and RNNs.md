@@ -1372,7 +1372,7 @@ Some of the names generated are indeed weird and interesting from a Norwegian la
 * Vedina
 * ina - Only name it was not able to provide with a capital letter. It is also a common Norwegian name. 
 
-The model also learned (for the most part 82/83) learned that new names should start with new capital letters without me telling it to. 
+The model also learned (for the most part 82/83) that new names should start with new capital letters without me telling it to. 
 
 Nevertheless, when arguing about potential baby names one could always turn to trivial projects such as this. I find it mind-blowing even though I get in hold (at least some) of the math and concepts involved. This is indeed the start of something big. 
 
