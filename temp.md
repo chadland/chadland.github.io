@@ -18,18 +18,8 @@ network” indicates that the network employs a mathematical operation called co
 
 I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps. For example
 
-{% raw %}{::nomarkdown}
-    <div>
-    $$
-    \newcommand{\lolli}{\multimap}
-    \newcommand{\tensor}{\otimes}
-    ... More mathjax here
-    $$
-    </div>
-{:/}{% endraw %}
-
-
-    It is well known that if $ax^2 + bx + c = 0$, then $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+\\[ \frac{1}{n^{2}} \\]
+\\( 1/x^{2} \\)
 
 ![alt text](https://ujwlkarn.files.wordpress.com/2016/08/giphy.gif?w=748 "Illustration of convolutional nets")
 
