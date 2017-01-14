@@ -14,6 +14,23 @@ Convolutional neural networks have had a lot of buzz in recent years. As the nam
 Convolutional networks convolutional (LeCun, 1989), also known as neural networks or CNNs, are a specialized kind of neural network for processing data that has a known, grid-like topology. Examples include time-series data, which can be thought of as a 1D grid taking samples at regular time intervals, and image data, which can be thought of as a 2D grid of pixels. Convolutional networks have been tremendously successful in practical applications. The name “convolutional neural
 network” indicates that the network employs a mathematical operation called convolution. Convolution is a specialized kind of linear operation. Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.<cite>[ Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville][1]</cite>
 
+###The Convolution Operation
+
+I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps. For example
+
+{% raw %}{::nomarkdown}
+    <div>
+    $$
+    \newcommand{\lolli}{\multimap}
+    \newcommand{\tensor}{\otimes}
+    ... More mathjax here
+    $$
+    </div>
+{:/}{% endraw %}
+
+
+    It is well known that if $ax^2 + bx + c = 0$, then $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
 ![alt text](https://ujwlkarn.files.wordpress.com/2016/08/giphy.gif?w=748 "Illustration of convolutional nets")
 
 [1]:http://www.deeplearningbook.org
