@@ -19,7 +19,7 @@ network” indicates that the network employs a mathematical operation called co
 
 I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps. For example
 
-$$x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2b}.$$
+$ \sum_{\forall i}{x_i^{2}} $
 
 ![alt text](https://ujwlkarn.files.wordpress.com/2016/08/giphy.gif?w=748 "Illustration of convolutional nets")
 
