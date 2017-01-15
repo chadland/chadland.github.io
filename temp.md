@@ -59,17 +59,28 @@ In a typical feedforward neural network we connect each input neuron to each out
 
 ![alt text](http://pubs.sciepub.com/ajme/2/7/9/image/fig2.png)
 
-Source:  http://pubs.sciepub.com/ajme/2/7/9/
+Source: http://pubs.sciepub.com/ajme/2/7/9/
 
 These kernels are in terms learning to detect different features in an image such as edges etc. Once the network is more deeply connected it may also learn more high lever features such as faces, buildings etc. 
 
 ![alt text](https://qph.ec.quoracdn.net/main-qimg-730164d3f54d38eb08808dcf4796c68b?convert_to_webp=true)
 
-Source:  http://docplayer.net/10387005-Image-classification-for-dogs-and-cats.html
+Source: http://docplayer.net/10387005-Image-classification-for-dogs-and-cats.html
 
 A typically layer of a convolutional network consists of three stages. In the first stage, the layer performs several convolutions in parallell to produce a set of linear activations.  In the second stage each linear activation is run through a non linear activation function (RELUs etc.) This stage is called the detector stage. In the third stage pooling is used to modify the output layer further and is kind of dimensional reduction.
 
-A pooling function replaces the output of the net at a certain location with a summary stastic of the nearby outputs.  For example Max ppoling, which reports the maximum output in a matrix neigbourhood.  There exist many of these functions. 
+A pooling function replaces the output of the net at a certain location with a summary stastic of the nearby outputs.  For example Max ppoling, which reports the maximum output in a matrix neigbourhood.  There exist many of these functions such as average, l2 norm weighted average etc. 
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Max_pooling.png/314px-Max_pooling.png "Max pooling")
+
+The rational behind this is that it helps to make the representation become approximately invariant to small translations of the input.  Invariance to translation means that if we translate the input by a small amount, the values of most of the pooled outputs do not change.
+
+The three steps mentioned are usually repeated sequentially to capture more high-level features, until the last step which is predcting some task (e.g. if you have a dog, cat or a human in an image).
+
+##CNNs in NLP
+
+CNNs may also be used in NLP. If we have a sentence 
+
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
@@ -78,7 +89,7 @@ A pooling function replaces the output of the net at a certain location with a s
 ## References
 1. Deep Learning, 2016, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Book in preparation for MIT Press
 2. A Beginners Guide to Understanding Convolutional Neural Networks, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
-3. Understanding convolutional neural networks for NLP, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
+3. Understanding convolutional neural networks for NLP, http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
 
 
 
