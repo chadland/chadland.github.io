@@ -115,4 +115,4 @@ I will write some simple posts on practical cases using CNNs and TensorFlow. Her
 ### References
 1. Deep Learning, 2016, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Book in preparation for MIT Press
 2. A Beginners Guide to Understanding Convolutional Neural Networks, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
-3. Understanding convolutional neural networks for NLP, http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+3. Understanding convolutional neural networks for NLP, http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/ 
