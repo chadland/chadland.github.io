@@ -20,6 +20,8 @@ I remember from one of my Digital Signal Processing Courses back in the stone ag
 
 ![alt text](http://www.sciweavers.org/download/Tex2Img_1484476324.jpg "Equation convolution")
 
+<img src="http://bit.ly/13lShzA" align="center" border="0" alt="a_i^2 + b_j^2 = c_k^2" width="103" height="28" />
+
 , where w is a probability density function, x is our signal, t is a time index that can take only integer values and a the number of time steps we want to average over
 
 The convolution operation is typically denoted like this (with an asterix):
