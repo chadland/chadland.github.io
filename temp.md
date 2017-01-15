@@ -77,7 +77,7 @@ The rational behind this is that it helps to make the representation become appr
 
 The three steps mentioned are usually repeated sequentially to capture more high-level features, until the last step which is predcting some task (e.g. if you have a dog, cat or a human in an image).
 
-##CNNs in NLP
+###CNNs in NLP
 
 CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our input matrix might be represented as an 5 (rows) x 100 (columns) matrix with one hot encoding for each word. Our filters will then typically be as wide as the input matrix but with variable length in rows. The filters may cover 2-5 words. 
 
@@ -86,6 +86,21 @@ CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our i
 A big argument for CNNs is that they are fast. Very fast. Convolutions are a central part of computer graphics and implemented on a hardware level on GPUs. Compared to something like n-grams, CNNs are also efficient in terms of representation. With a large vocabulary, computing anything more than 3-grams can quickly become expensive. Even Google doesn’t provide anything beyond 5-grams. Convolutional Filters learn good representations automatically, without needing to represent the whole vocabulary. It’s completely reasonable to have filters of size larger than 5. I like to think that many of the learned filters in the first layer are capturing features quite similar (but not limited) to n-grams, but represent them in a more compact way.
 
 My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern (which in terms can be converted to text) it may have an explination to what product the customer will pick the next month. 
+
+###CNNs Parameters
+
+As this is supposed to be a high level intro to CNNs some important details have been omitted from this article. 
+Here are couple:
+
+Patch  - Patch is usually the same as kernel/filter applied in the convolution process
+Stride - How many pixels you are shifting your filter when moving your kernel/filter
+Valid Padding - This has to do with where you start applying your filter. If you do not do anything in the edges (no padding) it is called valid padding. 
+Same Padding - Pad with 0s to make the input map and the output map roughtly the same. 
+1x1 Convolution
+Inception Module
+
+
+
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
