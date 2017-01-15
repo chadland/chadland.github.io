@@ -75,7 +75,7 @@ A pooling function replaces the output of the net at a certain location with a s
 
 The rational behind this is that it helps to make the representation become approximately invariant to small translations of the input.  Invariance to translation means that if we translate the input by a small amount, the values of most of the pooled outputs do not change.
 
-The three steps mentioned are usually repeated sequentially to capture more high-level features, until the last step which is predcting some task (e.g. if you have a dog, cat or a human in an image).
+The three steps mentioned are usually repeated sequentially to capture more high-level features, until the last step which is predicting some task and essentially minmizing a loss function (softmax crossentropy) (e.g. if you have a dog, cat or a human in an image).
 
 ###CNNs in NLP
 
@@ -85,7 +85,7 @@ CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our i
 
 A big argument for CNNs is that they are fast. Very fast. Convolutions are a central part of computer graphics and implemented on a hardware level on GPUs. Compared to something like n-grams, CNNs are also efficient in terms of representation. With a large vocabulary, computing anything more than 3-grams can quickly become expensive. Even Google doesn’t provide anything beyond 5-grams. Convolutional Filters learn good representations automatically, without needing to represent the whole vocabulary. It’s completely reasonable to have filters of size larger than 5. I like to think that many of the learned filters in the first layer are capturing features quite similar (but not limited) to n-grams, but represent them in a more compact way.
 
-My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern (which in terms can be converted to text) it may have an explination to what product the customer will pick the next month. 
+My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern / email communication (which in terms can be converted to text) it may have an explination to what product the customer will take/or not take in the future. 
 
 ###CNNs Parameters
 
@@ -100,11 +100,17 @@ Here are couple:
 * Inception Module
 * Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
 
+###CNNs ideas
+
+I will publish some posts on practical cases using CNNs and TensorFlow. Here are some datasets I plan to have a look at.
+
+1. I will attempt to use review text to see what explanatory power language usage has to the ratings. I will try to use CNNs to predict the rating, to see whether the language features used in the past for specific author will have an explantory effect on the rating (which I expect). http://sifaka.cs.uiuc.edu/~wang296/Data/LARA/Amazon/readme.txt. E.g do customers that have a rough language have a bias towards giving low ratings etc. 
+
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
 [3]:http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
 
-## References
+### References
 1. Deep Learning, 2016, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Book in preparation for MIT Press
 2. A Beginners Guide to Understanding Convolutional Neural Networks, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
 3. Understanding convolutional neural networks for NLP, http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
