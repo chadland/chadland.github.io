@@ -11,16 +11,16 @@ Convolutional neural networks have had a lot of buzz in recent years. As the nam
 
 ![alt text](https://adeshpande3.github.io/assets/Cover.png "Illustration of convolutional nets")
 
-Convolutional networks convolutional (LeCun, 1989), also known as neural networks or CNNs, are a specialized kind of neural network for processing data that has a known, grid-like topology. Examples include time-series data, which can be thought of as a 1D grid taking samples at regular time intervals, and image data, which can be thought of as a 2D grid of pixels. Convolutional networks have been tremendously successful in practical applications. The name “convolutional neural
+Convolutional networks (LeCun, 1989), also known as neural networks or CNNs, are a specialized kind of neural network for processing data that has a known, grid-like topology. Examples include time-series data, which can be thought of as a 1D grid taking samples at regular time intervals, and image data, which can be thought of as a 2D grid of pixels. Convolutional networks have been tremendously successful in practical applications. The name “convolutional neural
 network” indicates that the network employs a mathematical operation called convolution. Convolution is a specialized kind of linear operation. Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers. <cite>[ Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville][1]</cite>
 
 ###The Convolution Operation
 
-I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is a weighted average sample of the signal over some time steps, we do this do cancel out noise and to get a more stable signal.
+I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is a weighted average sample of the signal over some time steps, we did this to cancel out noise and to get a more stable signal.
 
 ![alt text](http://www.sciweavers.org/download/Tex2Img_1484476324.jpg "Equation convolution")
 
-, where w is a probability density function, x is our signal, t is a time index that can take only integer values and a the number of time steps with want to average over
+, where w is a probability density function, x is our signal, t is a time index that can take only integer values and a the number of time steps we want to average over
 
 The convolution operation is typically denoted like this (with an asterix):
 
@@ -30,7 +30,7 @@ and discrete convolution is typically defined as this:
 
 ![alt text](http://www.sciweavers.org/download/Tex2Img_1484476979.jpg "Discrete notation")
 
-In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel/filter (w(t-a)) are typically an array of parameters that are learned by a ConvNet. The multidimensional arrays are usually called tensors.
+In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel/filter (w(t-a)) are typically an array of parameters that are learned. The multidimensional arrays are usually called tensors.
 
 Typically, we convolute over more than one axis at the time (example a 2D image): 
 
@@ -38,15 +38,15 @@ Typically, we convolute over more than one axis at the time (example a 2D image)
 
 Convolution is not the only part of ConvNets and usually other operations are calculated at the same time.
 
-Following is a simple visual example of the convolutional operation above. Imagine that the matrix on the left represents an black and white image. Each entry corresponds to one pixel, 0 for black and 1 for white (typically it’s between 0 and 255 for grayscale images). The sliding window is called a kernel, filter, or feature detector. Here we use a 3×3 filter, multiply its values element-wise with the original matrix, then sum them up. To get the full convolution we do this for each element by sliding the filter over the whole matrix. <cite>[ Understanding convolutional neural nets][3]</cite>
+Following is a simple visual example of the convolutional operation above. Imagine that the matrix on the left represents an black and white image. Each entry corresponds to one pixel, 0 for black and 1 for white (typically it’s between 0 and 255 for grayscale images). The sliding window is called a kernel, filter, or feature detector. Here we use a 3×3 filter, multiply its values element-wise with the original matrix, then sum them up. To get the full convolution we do this for each element by sliding the filter over the whole matrix using a stride of 1. <cite>[ Understanding convolutional neural nets][3]</cite>
 
 ![alt text](http://deeplearning.stanford.edu/wiki/images/6/6c/Convolution_schematic.gif "Illustration of convolutional operation")
 
 Source: http://deeplearning.stanford.edu/wiki/images
 
-The parameters of the kernels or filters are typically trained by the network but you have to initialize the values of the parameters. Also typically using Deep Learning tools such as Tensor Flow, one has to specify these how many kernels you want to train for the model. The more kernels the more parameter training. 
+The parameters of the kernels or filters are typically trained by the network but you have to initialize the values of the parameters. Also typically using Deep Learning tools such as Tensor Flow, one has to specify how many kernels you want to train for the model. The more kernels the more parameter training. 
 
-The output of the kernels are typically called feature maps. Below is an example of an image that has been blurred by using a filter/kernel:
+The output of the kernel multiplications are typically called feature maps. Below is an example of an image that has been blurred by using a filter/kernel:
 
 ![alt text](http://docs.gimp.org/en/images/filters/examples/generic-taj-convmatrix-blur.jpg "Blurring operation on an image")
 
@@ -54,14 +54,14 @@ Source: http://www.wildml.com/2015/11/understanding-convolutional-neural-network
 
 ###CNNs
 
-CNNs are basically just several layers of convolutions with nonlinear activation functions like ReLU or tanh applied to the results. These functions are used to capture non-linearity and especially the ReLUs lends themselves nicely to the derivation operation used in back-propagation in Neural Networks.  
-In a typical feedforward neural network, we connect each input neuron to each output neuron in the next layer. This is called a fully connected layer. However, by conducting the convolution operation over the input we get so called sparse connectivity, meaning that not all inputs are connected to a neuron in the next layer. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results.
+CNNs are basically just several layers of convolutions with nonlinear activation functions like ReLUs or tanhs applied to the result. These functions are used to capture non-linearity and especially the ReLUs lends themselves nicely to the derivation operation used in back-propagation in Neural Networks.  
+In a typical feedforward neural network, we connect each input neuron to each output neuron in the next layer. This is called a fully connected layer. However, by conducting the convolution operation over the input we get so called sparse connectivity, meaning that not all inputs are connected to a neuron in the next layer. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results. Typically a there are one or two fully connected layers following convolutions and max pooling operations.
 
 ![alt text](http://pubs.sciepub.com/ajme/2/7/9/image/fig2.png)
 
 Source: http://pubs.sciepub.com/ajme/2/7/9/
 
-These kernels are in terms learning to detect different features in an image such as edges etc. Once the network is more deeply connected it may also learn more high lever features such as faces, buildings etc. 
+These kernels are in terms learning to detect different features in an image such as edges etc. Once the network is more deeply connected it may also learn more high level features such as faces, buildings etc. 
 
 ![alt text](https://qph.ec.quoracdn.net/main-qimg-730164d3f54d38eb08808dcf4796c68b?convert_to_webp=true)
 
@@ -79,13 +79,13 @@ The three steps mentioned are usually repeated sequentially to capture more high
 
 ###CNNs in NLP
 
-CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our input matrix might be represented as an 5 (rows) x 100 (columns) matrix with one hot encoding for each word. Our filters will then typically be as wide as the input matrix but with variable length in rows. The filters may cover 2-5 words. 
+CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our input matrix might be represented as an 5 (rows) x 100 (columns) matrix with one hot encoding for each word. Our filters will then typically be as wide as the input matrix but with variable length in terms of rows. The filters may cover 2-5 words. 
 
 ![alt text](http://d3kbpzbmcynnmx.cloudfront.net/wp-content/uploads/2015/11/Screen-Shot-2015-11-06-at-12.05.40-PM.png)
 
-A big argument for CNNs is that they are fast. Very fast. Convolutions are a central part of computer graphics and implemented on a hardware level on GPUs. Compared to something like n-grams, CNNs are also efficient in terms of representation. With a large vocabulary, computing anything more than 3-grams can quickly become expensive. Even Google doesn’t provide anything beyond 5-grams. Convolutional Filters learn good representations automatically, without needing to represent the whole vocabulary. It’s completely reasonable to have filters of size larger than 5. I like to think that many of the learned filters in the first layer are capturing features quite similar (but not limited) to n-grams, but represent them in a more compact way.
+A big argument for using CNNs is that they are fast. Convolutions are a central part of computer graphics and implemented on a hardware level on GPUs. Compared to something like n-grams, CNNs are also efficient in terms of representation. With a large vocabulary, computing anything more than 3-grams can quickly become expensive. Even Google doesn’t provide anything beyond 5-grams. Convolutional Filters learn good representations automatically, without needing to represent the whole vocabulary. It’s completely reasonable to have filters of size larger than 5. I like to think that many of the learned filters in the first layer are capturing features quite similar (but not limited) to n-grams, but represent them in a more compact way.
 
-My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern / email communication (which in terms can be converted to text) it may have an explanation to what product the customer will take/or not take in the future. 
+My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern / email communication pattern (which in terms can be converted to text) it may have an explanation to what product the customer will take/or not take in the future. 
 
 ###CNN Terms
 
@@ -103,9 +103,9 @@ Here are couple:
 
 ###CNN Future Projects
 
-I will publish some posts on practical cases using CNNs and TensorFlow. Here are some projects I plan to have a look at.
+I will write some simple posts on practical cases using CNNs and TensorFlow. Here are some projects I plan to have a look at:
 
-1. I will attempt to use review text to see what explanatory power language usage has to the ratings. I will try to use CNNs to predict the rating, to see whether the language features used in the past for specific customer will have an explanatory effect on the current rating of a product (which I expect). http://sifaka.cs.uiuc.edu/~wang296/Data/LARA/Amazon/readme.txt. E.g. do customers that have a rough language have a bias towards giving low ratings etc. I will attempt to use a pre trained word2vec embeddings as inputs in the network. (Word2Vec explanation) http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/2. 
+1. I will attempt to use review text to see what explanatory power language usage has to the ratings. I will try to use CNNs to predict the rating, to see whether the language features used in the past for a specific customer will have an explanatory effect on the current rating of a product (which I expect). http://sifaka.cs.uiuc.edu/~wang296/Data/LARA/Amazon/readme.txt. E.g. do customers that have a "rough" language have a bias towards giving low ratings etc. I will attempt to use a pre trained word2vec embeddings of review text as inputs in the network. (Word2Vec explanation) http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/2. 
 2. Use CNNs with transactional text data to recommend the next bank product. The idea is that some transactional patterns may be explanatory to what product a bank customer may take as the next product. This predictive dimension will then be incorporated to the existing recommendation model. The goal is to see whether this model will improve the benchmark model. 
 
 [1]:http://www.deeplearningbook.org
