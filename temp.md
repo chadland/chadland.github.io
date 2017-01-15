@@ -101,7 +101,7 @@ Here are couple:
 * Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
 * Dropouts – To come 
 
-###CNN Projects
+###CNN Future Projects
 
 I will publish some posts on practical cases using CNNs and TensorFlow. Here are some projects I plan to have a look at.
 
