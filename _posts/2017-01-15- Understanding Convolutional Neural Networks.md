@@ -24,7 +24,7 @@ I remember from one of my Digital Signal Processing Courses back in the stone ag
 
 The convolution operation is typically denoted like this (with an asterix):
 
-<img src="http://bit.ly/2iX7YZ3" align="center" border="0" alt="s(t) = (x*w)(t)" width="139" height="18" />
+<img src="http://bit.ly/2iX7YZ3" align="center" border="0" alt="s(t) = (x*w)(t)" width="139" height="46" />
 
 and discrete convolution is typically defined as this: 
 
@@ -34,7 +34,7 @@ In machine learning applications the input is typically a multidimensional array
 
 Typically, we convolute over more than one axis at the time (example a 2D image): 
 
-![alt text](http://www.sciweavers.org/download/Tex2Img_1484479920.jpg "Cross correlation")
+<img src="http://bit.ly/2jTC43X" align="center" border="0" alt="S(i,j) = (K*I)(i,j) =  \sum_{m}^{} \sum_{n}^{} I(i+m,j+n)*K(m,n)" width="414" height="37" />
 
 Convolution is not the only part of ConvNets and usually other operations are calculated at the same time.
 
