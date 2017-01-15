@@ -6,13 +6,7 @@ excerpt: "In the future I will be using ConvNets to search for textual patterns 
 mathjax: true
 comments: true
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
- <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript" async
-      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-    </script>
+
 Convolutional neural networks have had a lot of buzz in recent years. As the name implies it is a weird combination of biology ,maths and a little CS sprinkled in, but these networks have been some of the most influential innovations in the field of computer vision. 2012 was the first year that neural nets grew to prominence as Alex Krizhevsky used them to win that year’s ImageNet competition (basically, the annual Olympics of computer vision), dropping the classification error record from 26% to 15%, an astounding improvement at the time. Ever since then, a host of companies have been using deep learning at the core of their services. Facebook uses neural nets for their automatic tagging algorithms, Google for their photo search, Amazon for their product recommendations, Pinterest for their home feed personalization, and Instagram for their search infrastructure.<cite>[ A Beginners Guide to Understanding Convolutional Neural Networks][2]</cite>
 
 ![alt text](https://adeshpande3.github.io/assets/Cover.png "Illustration of convolutional nets")
@@ -22,9 +16,9 @@ network” indicates that the network employs a mathematical operation called co
 
 ###The Convolution Operation
 
-I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps. For example
+I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps, we do this do cancel out noise and to get a more stable signal.
 
-<div>$\sum_{\forall i}{x_i^{2}}$</div>
+![alt text](http://bit.ly/2iW3v8Q "Equation convolution")
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
