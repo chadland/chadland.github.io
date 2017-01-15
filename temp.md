@@ -99,6 +99,7 @@ Here are couple:
 * 1x1 Convolution 
 * Inception Module
 * Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
+* Dropouts 
 
 ###CNNs ideas
 
