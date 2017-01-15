@@ -79,8 +79,13 @@ The three steps mentioned are usually repeated sequentially to capture more high
 
 ##CNNs in NLP
 
-CNNs may also be used in NLP. If we have a sentence 
+CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our input matrix might be represented as an 5 (rows) x 100 (columns) matrix with one hot encoding for each word. Our filters will then typically be as wide as the input matrix but with variable length in rows. The filters may cover 2-5 words. 
 
+![alt text](http://d3kbpzbmcynnmx.cloudfront.net/wp-content/uploads/2015/11/Screen-Shot-2015-11-06-at-12.05.40-PM.png)
+
+A big argument for CNNs is that they are fast. Very fast. Convolutions are a central part of computer graphics and implemented on a hardware level on GPUs. Compared to something like n-grams, CNNs are also efficient in terms of representation. With a large vocabulary, computing anything more than 3-grams can quickly become expensive. Even Google doesn’t provide anything beyond 5-grams. Convolutional Filters learn good representations automatically, without needing to represent the whole vocabulary. It’s completely reasonable to have filters of size larger than 5. I like to think that many of the learned filters in the first layer are capturing features quite similar (but not limited) to n-grams, but represent them in a more compact way.
+
+My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern (which in terms can be converted to text) it may have an explination to what product the customer will pick the next month. 
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
