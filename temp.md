@@ -18,7 +18,22 @@ network” indicates that the network employs a mathematical operation called co
 
 I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is that it as a weighted avarage sample of the signal over some time steps, we do this do cancel out noise and to get a more stable signal.
 
-![alt text](http://bit.ly/2iW3v8Q "Equation convolution")
+![alt text](http://www.sciweavers.org/download/Tex2Img_1484476324.jpg "Equation convolution")
+
+, where w is a probability density function, x is our signal , t is a time index that can take only integer values and a the number of timesteps with want to average over
+
+The convolution operation is typically denoted like this (with an asterix):
+
+![alt text](http://www.sciweavers.org/download/Tex2Img_1484476520.jpg "Normal notation")
+
+and discrete convolution is typically defined as this: 
+
+![alt text](http://www.sciweavers.org/download/Tex2Img_1484476979.jpg "Discrete notation")
+
+In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel (w(t-a)) are typically an array of parameters that are learned by a ConvNet algorithm. The mulitdimensional arrays are usually called tensors.
+
+
+
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
