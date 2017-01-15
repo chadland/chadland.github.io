@@ -96,11 +96,9 @@ Patch  - Patch is usually the same as kernel/filter applied in the convolution p
 Stride - How many pixels you are shifting your filter when moving your kernel/filter
 Valid Padding - This has to do with where you start applying your filter. If you do not do anything in the edges (no padding) it is called valid padding. 
 Same Padding - Pad with 0s to make the input map and the output map roughtly the same. 
-1x1 Convolution
+1x1 Convolution 
 Inception Module
-
-
-
+Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
