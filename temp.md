@@ -87,7 +87,7 @@ A big argument for CNNs is that they are fast. Very fast. Convolutions are a cen
 
 My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern / email communication (which in terms can be converted to text) it may have an explanation to what product the customer will take/or not take in the future. 
 
-###CNNs Parameters
+###CNN Terms
 
 As this is supposed to be a high level intro to CNNs some important details have been omitted from this article. 
 Here are couple:
@@ -101,7 +101,7 @@ Here are couple:
 * Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
 * Dropouts – To come 
 
-###CNNs ideas
+###CNN Projects
 
 I will publish some posts on practical cases using CNNs and TensorFlow. Here are some projects I plan to have a look at.
 
