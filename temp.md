@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Understanding Convolutional Neural Networks (A High Level Introduction)
+title: Understanding Convolutional Neural Networks (A very high level intro)
 date:  2017-01-11 12:54:47
 excerpt: "In the future I will be using ConvNets to search for textual patterns and prior to digging into this work I would like to create a very high level intro on the topic"
 mathjax: true
