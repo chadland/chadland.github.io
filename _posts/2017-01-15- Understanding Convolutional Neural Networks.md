@@ -14,7 +14,7 @@ Convolutional neural networks have had a lot of buzz in recent years. As the nam
 Convolutional networks (LeCun, 1989), also known as neural networks or CNNs, are a specialized kind of neural network for processing data that has a known, grid-like topology. Examples include time-series data, which can be thought of as a 1D grid taking samples at regular time intervals, and image data, which can be thought of as a 2D grid of pixels. Convolutional networks have been tremendously successful in practical applications. The name “convolutional neural
 network” indicates that the network employs a mathematical operation called convolution. Convolution is a specialized kind of linear operation. Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers. <cite>[ Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville][1]</cite>
 
-###The Convolution Operation
+### The Convolution Operation
 
 I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is a weighted average sample of the signal over some time steps, we did this to cancel out noise and to get a more stable signal.
 
@@ -52,7 +52,7 @@ The output of the kernel multiplications are typically called feature maps. Belo
 
 Source: http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
 
-###CNNs
+### CNNs
 
 CNNs are basically just several layers of convolutions with nonlinear activation functions like ReLUs or tanhs applied to the result. These functions are used to capture non-linearity and especially the ReLUs lends themselves nicely to the derivation operation used in back-propagation in Neural Networks.  
 In a typical feedforward neural network, we connect each input neuron to each output neuron in the next layer. This is called a fully connected layer. However, by conducting the convolution operation over the input we get so called sparse connectivity, meaning that not all inputs are connected to a neuron in the next layer. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results. Typically a there are one or two fully connected layers following convolutions and max pooling operations.
@@ -77,7 +77,7 @@ The rationale behind this is that it helps to make the representation become app
 
 The three steps mentioned are usually repeated sequentially to capture more high-level features, until the last step which is predicting some task and essentially minimizing a loss function (softmax cross entropy) (e.g. if you have a dog, cat or a human in an image).
 
-###CNNs in NLP
+### CNNs in NLP
 
 CNNs may also be used in NLP. If we have a sentence "I want an ice cream", our input matrix might be represented as an 5 (rows) x 100 (columns) matrix with one hot encoding for each word. Our filters will then typically be as wide as the input matrix but with variable length in terms of rows. The filters may cover 2-5 words. 
 
@@ -87,7 +87,7 @@ A big argument for using CNNs is that they are fast. Convolutions are a central 
 
 My idea is to use CovNets as part inputs to recommendation systems in banking. For example, if a customer has a certain transactional pattern / email communication pattern (which in terms can be converted to text) it may have an explanation to what product the customer will take/or not take in the future. 
 
-###CNN Terms
+### CNN Terms
 
 As this is supposed to be a high level intro to CNNs some important details have been omitted from this article. 
 Here are couple:
@@ -101,7 +101,7 @@ Here are couple:
 * Channels - Channels are different “views” of your input data. For example, in image recognition you typically have RGB (red, green, blue) channels. You can apply convolutions across channels, either with different or equal weights. In NLP you could imagine having various channels as well: You could have a separate channels for different word embeddings (word2vec and GloVe for example), or you could have a channel for the same sentence represented in different languages, or phrased in different ways. <cite>[ Understanding convolutional neural networks for NLP][3]</cite>
 * Dropouts – To come 
 
-###CNN Future Projects
+### CNN Future Projects
 
 I will write some simple posts on practical cases using CNNs and TensorFlow. Here are some projects I plan to have a look at:
 
