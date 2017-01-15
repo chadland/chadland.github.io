@@ -61,7 +61,17 @@ In a typical feedforward neural network we connect each input neuron to each out
 
 Source:  http://pubs.sciepub.com/ajme/2/7/9/
 
-In a traditional feedforward neural network we connect each input neuron to each output neuron in the next layer. That’s also called a fully connected layer, or affine layer. In CNNs we don’t do that. Instead, we use convolutions over the input layer to compute the output. This results in local connections, where each region of the input is connected to a neuron in the output. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results. There’s also something something called pooling (subsampling) layers, but I’ll get into that later. During the training phase, a CNN automatically learns the values of its filters based on the task you want to perform. For example, in Image Classification a CNN may learn to detect edges from raw pixels in the first layer, then use the edges to detect simple shapes in the second layer, and then use these shapes to deter higher-level features, such as facial shapes in higher layers. The last layer is then a classifier that uses these high-level features.
+These kernels are in terms learning to detect different features in an image such as edges etc. Once the network is more deeply connected it may also learn more high lever features such as faces, buildings etc. 
+
+![alt text](http://docplayer.net/docs-images/27/10387005/images/6-0.png)
+
+Source:  http://docplayer.net/10387005-Image-classification-for-dogs-and-cats.html
+
+A typically layer of a convolutional network consists of three stages. In the first stage, the layer performs several convolutions in parallell to produce a set of linear activations.  In the second stage each linear activation is run through a non linear activation function (RELUs etc.) This stage is called the detector stage. In the third stage pooling is used to modify the output layer further and is kind of dimensional reduction.
+
+A pooling function replaces the output of the net at a certain location with a summary stastic of the nearby outputs.  For example Max ppoling, which reports the maximum output in a matrix neigbourhood.  There exist many of these functions. 
+
+
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
