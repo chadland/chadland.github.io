@@ -30,9 +30,15 @@ and discrete convolution is typically defined as this:
 
 ![alt text](http://www.sciweavers.org/download/Tex2Img_1484476979.jpg "Discrete notation")
 
-In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel (w(t-a)) are typically an array of parameters that are learned by a ConvNet algorithm. The mulitdimensional arrays are usually called tensors.
+In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel/filter (w(t-a)) are typically an array of parameters that are learned by a ConvNet. The mulitdimensional arrays are usually called tensors.
 
+Typically we convolute over more than one axis at the time: 
 
+![alt_text](http://www.sciweavers.org/download/Tex2Img_1484479920.jpg, "Cross correlation")
+
+Convolution is not the only part of ConvNets and usually other operations are calculated at the same time.
+
+Here is a simple visual example of the convolutional and images:
 
 
 [1]:http://www.deeplearningbook.org
