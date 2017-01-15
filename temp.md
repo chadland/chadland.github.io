@@ -38,17 +38,38 @@ Typically we convolute over more than one axis at the time (example a 2D image):
 
 Convolution is not the only part of ConvNets and usually other operations are calculated at the same time.
 
-Here is a simple visual example of the convolutional and images:
+Following is a simple visual example of the convolutional operation above. Imagine that the matrix on the left represents an black and white image. Each entry corresponds to one pixel, 0 for black and 1 for white (typically it’s between 0 and 255 for grayscale images). The sliding window is called a kernel, filter, or feature detector. Here we use a 3×3 filter, multiply its values element-wise with the original matrix, then sum them up. To get the full convolution we do this for each element by sliding the filter over the whole matrix.<cite>[ Understanding convolutional neural nets][3]</cite>
 
-![alt text](http://deeplearning.stanford.edu/wiki/images/6/6c/Convolution_schematic.gif "Illustration of convolutional nets")
+![alt text](http://deeplearning.stanford.edu/wiki/images/6/6c/Convolution_schematic.gif "Illustration of convolutional operation")
+
+Source: http://deeplearning.stanford.edu/wiki/images
+
+The parameters of the kernels or filters are typically trained by the network but you have to initilize the values of the parameters. Also typically using Deep Learning tools such as Tensor Flow, one has to specify these how many kernels you want to train for the model. The more kernels the more parameter training. 
+
+The output of the kernels are typically called feature maps. Below is an example of an image that has been blured by using a filter/kernel:
+
+![alt text](http://docs.gimp.org/en/images/filters/examples/generic-taj-convmatrix-blur.jpg "Bluring operation on an image")
+
+Source: http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
+
+###CNNs
+
+CNNs are basically just several layers of convolutions with nonlinear activation functions like ReLU or tanh applied to the results. These functions are used to capture non-linearity and especially the ReLUslend themselves nicely to the derivation operation used in back-propagation in Neural Networks.  
+In a typical feedforward neural network we connect each input neuron to each output neuron in the next layer. This is called a fully connected layer. However, by conducting the convolution operation over the input we get so called sparse connectivity, meaning that not all inputs are connected to a neuron in the next layer. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results.
+
+
+
+In a traditional feedforward neural network we connect each input neuron to each output neuron in the next layer. That’s also called a fully connected layer, or affine layer. In CNNs we don’t do that. Instead, we use convolutions over the input layer to compute the output. This results in local connections, where each region of the input is connected to a neuron in the output. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results. There’s also something something called pooling (subsampling) layers, but I’ll get into that later. During the training phase, a CNN automatically learns the values of its filters based on the task you want to perform. For example, in Image Classification a CNN may learn to detect edges from raw pixels in the first layer, then use the edges to detect simple shapes in the second layer, and then use these shapes to deter higher-level features, such as facial shapes in higher layers. The last layer is then a classifier that uses these high-level features.
 
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
+[3]:http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/
 
 ## References
 1. Deep Learning, 2016, Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Book in preparation for MIT Press
 2. A Beginners Guide to Understanding Convolutional Neural Networks, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
+3. Understanding convolutional neural networks for NLP, https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
 
 
 
