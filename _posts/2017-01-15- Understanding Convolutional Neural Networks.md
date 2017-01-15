@@ -18,19 +18,17 @@ network” indicates that the network employs a mathematical operation called co
 
 I remember from one of my Digital Signal Processing Courses back in the stone age that convolution was used to discretize analog signals. My simple analogy to this operation is a weighted average sample of the signal over some time steps, we did this to cancel out noise and to get a more stable signal.
 
-![alt text](http://www.sciweavers.org/download/Tex2Img_1484476324.jpg "Equation convolution")
-
-<img src="http://bit.ly/13lShzA" align="center" border="0" alt="a_i^2 + b_j^2 = c_k^2" width="103" height="28" />
+<img src="http://bit.ly/2jTBqmM" align="center" border="0" alt="s(t) =  \int x * w(t-a) da" width="197" height="46" />
 
 , where w is a probability density function, x is our signal, t is a time index that can take only integer values and a the number of time steps we want to average over
 
 The convolution operation is typically denoted like this (with an asterix):
 
-![alt text](http://www.sciweavers.org/download/Tex2Img_1484476520.jpg "Normal notation")
+<img src="http://bit.ly/2iX7YZ3" align="center" border="0" alt="s(t) = (x*w)(t)" width="139" height="18" />
 
 and discrete convolution is typically defined as this: 
 
-![alt text](http://www.sciweavers.org/download/Tex2Img_1484476979.jpg "Discrete notation")
+<img src="http://bit.ly/2iX2Zrr" align="center" border="0" alt="s(t) = (x*w)(t) = \sum_{_ -\infty }^{\infty} x(a) * w(t-a)" width="311" height="50" />
 
 In machine learning applications the input is typically a multidimensional array (does not have to be) of data and the kernel/filter (w(t-a)) are typically an array of parameters that are learned. The multidimensional arrays are usually called tensors.
 
