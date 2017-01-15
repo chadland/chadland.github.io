@@ -104,7 +104,8 @@ Here are couple:
 
 I will publish some posts on practical cases using CNNs and TensorFlow. Here are some datasets I plan to have a look at.
 
-1. I will attempt to use review text to see what explanatory power language usage has to the ratings. I will try to use CNNs to predict the rating, to see whether the language features used in the past for specific author will have an explantory effect on the rating (which I expect). http://sifaka.cs.uiuc.edu/~wang296/Data/LARA/Amazon/readme.txt. E.g do customers that have a rough language have a bias towards giving low ratings etc. 
+1. I will attempt to use review text to see what explanatory power language usage has to the ratings. I will try to use CNNs to predict the rating, to see whether the language features used in the past for specific author will have an explantory effect on the rating (which I expect). http://sifaka.cs.uiuc.edu/~wang296/Data/LARA/Amazon/readme.txt. E.g do customers that have a rough language have a bias towards giving low ratings etc. I will attempt to use a pretrained word2vec embeddings as inputs in the network. (Word2Vec explination) http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/2. 
+2. Use CNNs with transactional text data to recommend the next bank produc. The idea is that some transactional patterns may be explanatory to what product a bank customer may take as the next product. This predictive dimension will then be incorporated to the existing recommendation model. The goal is to see whether this model will improve the benchmark model. 
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
