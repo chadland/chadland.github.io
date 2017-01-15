@@ -34,7 +34,7 @@ In machine learning applications the input is typically a multidimensional array
 
 Typically we convolute over more than one axis at the time (example a 2D image): 
 
-![alt_text](http://www.sciweavers.org/download/Tex2Img_1484479920.jpg, "Cross correlation")
+![alt text](http://www.sciweavers.org/download/Tex2Img_1484479920.jpg "Cross correlation")
 
 Convolution is not the only part of ConvNets and usually other operations are calculated at the same time.
 
@@ -57,7 +57,7 @@ Source: http://www.wildml.com/2015/11/understanding-convolutional-neural-network
 CNNs are basically just several layers of convolutions with nonlinear activation functions like ReLU or tanh applied to the results. These functions are used to capture non-linearity and especially the ReLUslend themselves nicely to the derivation operation used in back-propagation in Neural Networks.  
 In a typical feedforward neural network we connect each input neuron to each output neuron in the next layer. This is called a fully connected layer. However, by conducting the convolution operation over the input we get so called sparse connectivity, meaning that not all inputs are connected to a neuron in the next layer. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results.
 
-
+![alt text](http://pubs.sciepub.com/ajme/2/7/9/image/fig2.png)
 
 In a traditional feedforward neural network we connect each input neuron to each output neuron in the next layer. That’s also called a fully connected layer, or affine layer. In CNNs we don’t do that. Instead, we use convolutions over the input layer to compute the output. This results in local connections, where each region of the input is connected to a neuron in the output. Each layer applies different filters, typically hundreds or thousands like the ones showed above, and combines their results. There’s also something something called pooling (subsampling) layers, but I’ll get into that later. During the training phase, a CNN automatically learns the values of its filters based on the task you want to perform. For example, in Image Classification a CNN may learn to detect edges from raw pixels in the first layer, then use the edges to detect simple shapes in the second layer, and then use these shapes to deter higher-level features, such as facial shapes in higher layers. The last layer is then a classifier that uses these high-level features.
 
