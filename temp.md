@@ -63,15 +63,13 @@ Source:  http://pubs.sciepub.com/ajme/2/7/9/
 
 These kernels are in terms learning to detect different features in an image such as edges etc. Once the network is more deeply connected it may also learn more high lever features such as faces, buildings etc. 
 
-![alt text](http://docplayer.net/docs-images/27/10387005/images/6-0.png)
+![alt text](https://qph.ec.quoracdn.net/main-qimg-730164d3f54d38eb08808dcf4796c68b?convert_to_webp=true)
 
 Source:  http://docplayer.net/10387005-Image-classification-for-dogs-and-cats.html
 
 A typically layer of a convolutional network consists of three stages. In the first stage, the layer performs several convolutions in parallell to produce a set of linear activations.  In the second stage each linear activation is run through a non linear activation function (RELUs etc.) This stage is called the detector stage. In the third stage pooling is used to modify the output layer further and is kind of dimensional reduction.
 
 A pooling function replaces the output of the net at a certain location with a summary stastic of the nearby outputs.  For example Max ppoling, which reports the maximum output in a matrix neigbourhood.  There exist many of these functions. 
-
-
 
 [1]:http://www.deeplearningbook.org
 [2]:https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks-Part-2/
